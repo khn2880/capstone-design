@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 
-f = open("/Users/hanuri/Desktop/capstone_code/반려동물.csv", 'r', encoding='utf-8')
+f = open("/Users/hanuri/Desktop/capstone_design/crawling_result.csv", 'r', encoding='utf-8')
 news = f.read()
 okt = Okt()
 noun = okt.nouns(news)
@@ -20,7 +20,7 @@ noun_list = count.most_common(100)
 for v in noun_list:
     print(v)
 
-with open("/Users/hanuri/Desktop/noun_list.csv", "w", newline='', encoding='euc-kr') as f:
+with open("/Users/hanuri/Desktop/capstone_design/noun_list.csv", "w", newline='', encoding='euc-kr') as f:
     csvw = csv.writer(f)
     for v in noun_list[:5]:
         csvw.writerow(v)
@@ -31,5 +31,5 @@ cloud = wc.generate_from_frequencies(count)
 plt.figure()
 plt.imshow(cloud)
 plt.axis('off')
-plt.savefig('워드클라우드.png')
+plt.savefig('/Users/hanuri/Desktop/capstone_design/wordcloud.png')
 plt.show()
