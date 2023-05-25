@@ -1,8 +1,8 @@
 import pandas as pd
 from collections import Counter
 
-f = pd.read_csv("/Users/hanuri/Desktop/capstone_design/crawling_result.csv")
-g = pd.read_csv("/Users/hanuri/Desktop/capstone_design/noun_list.csv", names=['noun', 'num'], encoding='euc-kr')
+f = pd.read_csv("/Users/hanuri/Desktop/capstone_design/result/crawling_result.csv")
+g = pd.read_csv("/Users/hanuri/Desktop/capstone_design/result/noun_list.csv", names=['noun', 'num'], encoding='euc-kr')
 
 pd.set_option('display.max_colwidth', None)
 
