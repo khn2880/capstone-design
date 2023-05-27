@@ -1,5 +1,6 @@
 import pandas as pd
 from collections import Counter
+import csv
 
 f = pd.read_csv("/Users/hanuri/Desktop/capstone_design/result/crawling_result.csv")
 g = pd.read_csv("/Users/hanuri/Desktop/capstone_design/result/noun_list.csv", names=['noun', 'num'], encoding='euc-kr')
@@ -45,6 +46,14 @@ ix1 = f[f['link'] == list[0][0]].index
 ix2 = f[f['link'] == list[1][0]].index
 ix3 = f[f['link'] == list[2][0]].index
 
-print(f['link'][ix1])
-print(f['link'][ix2])
-print(f['link'][ix3])
+#print(f['link'][ix1])
+#print(f['link'][ix2])
+#print(f['link'][ix3])
+
+h = open('/Users/hanuri/Desktop/capstone_design/result/links.csv', 'w', newline='')
+wr = csv.writer(h)
+wr.writerow(f['link'][ix1])
+wr.writerow(f['link'][ix2])
+wr.writerow(f['link'][ix3])
+
+h.close()
