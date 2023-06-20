@@ -8,6 +8,7 @@ from links_code import *
 from nouns_code import *
 import os
 
+#개인 토큰은 제외했습니다.
 token = ""
 app = Flask(__name__)
 slack = Slacker(token)
