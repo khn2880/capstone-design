@@ -8,7 +8,7 @@ from links_code import *
 from nouns_code import *
 import os
 
-token = "xoxb-5331366641173-5346961110721-VoHX7VIKMmJafbgZI2NsvMJK"
+token = ""
 app = Flask(__name__)
 slack = Slacker(token)
 

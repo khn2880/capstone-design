@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
 import sys, json, requests
+
+#개인 api는 제외했습니다.
 application = Flask(__name__)
 @application.route("/webhook/", methods=["POST"])
 def webhook():

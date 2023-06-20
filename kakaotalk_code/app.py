@@ -1,5 +1,7 @@
 from flask import Flask, jsonify, request
 import requests, sys, json
+
+#개인 api는 제외했습니다.
 application = Flask(__name__)
 a = {}
 
